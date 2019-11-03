@@ -6,6 +6,7 @@ def Song
   @@genres = []
   @@artists = []
   @@genre_count = {}
+  @@artist_count = {}
   
   def initialize(name, artist, genre)
     @name = name 
@@ -14,17 +15,36 @@ def Song
     @@count += 1
     
     if !@@genres.include?(genre)
-      @@genres << genre 
+      @@genres << genre
+      @@genre_count[genre] = 1
+    else
+      temp_count = @@genre_count[genre]
+      temp_count += 1
+      @@genre_count[genre] = temp_count
+    end
+    
+    if !@@artists.include?(artist)
+      @@artists << artist 
+      @@artist_count[artist] = 1
+    else
+      temp_count = @@artist_count[artist]
+      temp_count += 1
+      @@artist_count[artist] = temp_count
     end
     
   end
   
-  def self.genres 
-  end 
-  
-  
   def self.count
     @@count
   end
+  
+  def self.artists
+    @@artists
+  end
+  
+  def self.genres 
+    @@genres
+  end
+  
   
 end
