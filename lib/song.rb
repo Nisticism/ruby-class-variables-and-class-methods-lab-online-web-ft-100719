@@ -33,7 +33,6 @@ class Song
       temp_count += 1
       @@artist_count[artist] = temp_count
     end
-    
   end
   
   def self.count
@@ -55,5 +54,4 @@ class Song
   def self.artist_count
     @@artist_count
   end
-  
 end
