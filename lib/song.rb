@@ -24,7 +24,7 @@ class Song
       temp_count += 1
       @@genre_count[genre] = temp_count
     end
-    
+
     if !@@artists.include?(artist)
       @@artists << artist 
       @@artist_count[artist] = 1
