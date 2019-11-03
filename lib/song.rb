@@ -17,7 +17,6 @@ class Song
     @@artists << artist
     
     unless @@genres.include?(genre)
-      @@genres << genre
       @@genre_count[genre] = 1
     else
       temp_count = @@genre_count[genre]
@@ -26,7 +25,6 @@ class Song
     end
 
     unless @@artists.include?(artist)
-      @@artists << artist 
       @@artist_count[artist] = 1
     else
       temp_count = @@artist_count[artist]
