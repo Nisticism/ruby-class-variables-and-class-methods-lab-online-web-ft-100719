@@ -19,7 +19,9 @@ class Song
     if !@@genres.include?(genre)
       @@genres << genre
       @@genre_count[genre] = 1
-    else
+    end
+    
+    if
       temp_count = @@genre_count[genre]
       temp_count += 1
       @@genre_count[genre] = temp_count
